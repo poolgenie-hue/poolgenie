@@ -74,8 +74,9 @@
   .site-header .wrap { display: flex; align-items: center; justify-content: space-between; padding-block: .9rem; gap: 1rem; }
   .brand { display: inline-flex; align-items: center; flex: none; text-decoration: none; line-height: 0; }
   .brand img { width: 92px; height: 92px; object-fit: contain; display: block; background: #fff; border: 2px solid rgba(95, 212, 224, .8); border-radius: 12px; box-shadow: 0 4px 14px rgba(0, 0, 0, .12); }
-  .header-actions { display: flex; gap: .6rem; }
-  .header-actions .btn { padding: .65rem 1.1rem; font-size: .95rem; }
+  .header-actions { display: flex; align-items: center; gap: .55rem; }
+  .header-actions .btn { padding: .65rem 1rem; font-size: .92rem; min-height: 42px; white-space: nowrap; }
+  .header-actions .btn svg { width: 1.05rem; height: 1.05rem; }
 
   /* ---------- Hero: pool-tile grid ---------- */
   .hero {
@@ -215,6 +216,33 @@
   .gallery .service-media { aspect-ratio: 1; }
   .gallery figcaption { margin-top: .45rem; font-size: .92rem; color: var(--muted); }
 
+
+  /* ---------- Hero customer review teaser ---------- */
+  .hero-rating { max-width: 390px; padding: 1.6rem; border: 1px solid rgba(255,255,255,.4); border-radius: 18px; background: rgba(4,31,47,.72); box-shadow: 0 18px 48px rgba(0,0,0,.2); backdrop-filter: blur(5px); }
+  .rating-stars, .review-stars { color: #ffd166; letter-spacing: .12em; font-size: 1.65rem; line-height: 1.2; }
+  .rating-title { margin-top: .7rem; font: 800 1.35rem/1.15 var(--font-head); color: #fff; }
+  .rating-note { margin: .65rem 0 1.2rem; color: #e4f3f6; }
+  .hero-rating .btn-call { background: #fff; }
+  .faq-section { background: #f4fafb; }
+  .faq-list { max-width: 850px; display: grid; gap: .8rem; }
+  .faq-item { border: 1px solid #d5e8ec; border-radius: 12px; background: #fff; padding: 0 1.2rem; box-shadow: 0 4px 14px rgba(6,50,74,.04); }
+  .faq-item summary { cursor: pointer; list-style: none; position: relative; padding: 1.15rem 2.1rem 1.15rem 0; color: var(--deep); font-weight: 800; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; position: absolute; right: .15rem; top: 50%; transform: translateY(-50%); color: var(--pool); font-size: 1.6rem; font-weight: 600; }
+  .faq-item[open] summary::after { content: "−"; }
+  .faq-item p { padding: 0 0 1.2rem; color: var(--muted); }
+  .faq-item .btn { margin: 0 0 1.2rem; }
+  .review-grid { display: grid; gap: 1rem; }
+  @media (min-width: 760px) { .review-grid { grid-template-columns: repeat(3, minmax(0,1fr)); } }
+  .review-card { border: 1px solid #dcebef; border-radius: 16px; padding: 1.5rem; background: #fff; box-shadow: 0 10px 28px rgba(6,50,74,.07); }
+  .review-card blockquote { margin: .9rem 0; color: var(--ink); font-size: 1.05rem; }
+  .review-byline { color: var(--muted); font-size: .92rem; font-weight: 600; }
+  .reviews-disclaimer { margin-top: 1rem; color: var(--muted); font-size: .82rem; }
+  .form-section { background: var(--tile); }
+  .form-wrap { max-width: 760px; }
+  .form-wrap .section-head { margin-bottom: 1.5rem; }
+  .form-wrap .quote { max-width: 720px; }
+
   /* ---------- Final call-to-action ---------- */
   .cta { background: var(--deep); color: #fff; text-align: center; padding-block: clamp(3rem, 7vw, 5rem); }
   .cta h2 { font-size: clamp(1.9rem, 4.5vw, 3.2rem); max-width: 24ch; margin-inline: auto; }
@@ -238,7 +266,9 @@
   @media (max-width: 720px) {
     .site-header .wrap { padding-block: .55rem; }
     .brand img { width: 76px; height: 76px; }
-    .header-actions { display: none; }
+    .header-actions { display: flex; gap: .4rem; }
+    .header-actions .btn { padding: .58rem .72rem; min-height: 40px; font-size: .84rem; }
+    .brand img { width: 68px; height: 68px; }
     .sticky-bar { padding-inline: .75rem; }
     .hero { padding-block: 2rem 4.5rem; }
     .hero-copy { padding-block: .5rem; }
@@ -259,7 +289,10 @@
 <header class="site-header">
   <div class="wrap">
     <a href="#top" class="brand" aria-label="Pool Genie home"><img src="images/pool-genie-logo.png" alt="Pool Genie logo"></a>
-
+    <nav class="header-actions" aria-label="Quick contact">
+      <a class="btn btn-call js-call" href="tel:+27740645524" aria-label="Call Pool Genie">Call</a>
+      <a class="btn btn-wa js-wa" href="https://wa.me/27740645524" target="_blank" rel="noopener" aria-label="WhatsApp Pool Genie">WhatsApp</a>
+    </nav>
   </div>
 </header>
 
@@ -273,35 +306,11 @@
       <h1 class="hero-eyebrow">Cape Town <span class="certified-word">Certified</span> <span class="pool-services-word">Pool Services</span></h1>
       <p class="hero-services"><span class="service-chip">Pool Repairs</span><span class="service-dot" aria-hidden="true">·</span><span class="service-chip">Pool Cleaning</span><span class="service-dot" aria-hidden="true">·</span><span class="service-chip">Pool Renovations</span></p>
     </div>
-    <form class="quote" id="quote-form">
-      <h2>Tell us what your pool needs</h2>
-      <p class="sub">Fill in the details and we’ll help you with the next step.</p>
-      <div class="field">
-        <label for="client-name">Your name</label>
-        <input id="client-name" name="name" autocomplete="name" required placeholder="Full name">
-      </div>
-      <div class="field">
-        <label for="client-phone">Phone number</label>
-        <input id="client-phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your contact number">
-      </div>
-      <div class="field">
-        <label for="pool-service">What do you need help with?</label>
-        <select id="pool-service" name="service" required>
-          <option value="" selected disabled>Select a service</option>
-          <option>Pool repairs</option><option>Pool cleaning</option><option>Pumps and filters</option><option>Pool renovations</option><option>Other pool service</option>
-        </select>
-      </div>
-      <div class="field">
-        <label for="client-area">Suburb / area in Cape Town</label>
-        <input id="client-area" name="area" autocomplete="address-level2" required placeholder="e.g. Durbanville">
-      </div>
-      <div class="field">
-        <label for="pool-details">A few details about the job</label>
-        <textarea id="pool-details" name="details" placeholder="Tell us about the pool or problem (optional)"></textarea>
-      </div>
-      <button class="btn btn-wa btn-block" type="submit">Send enquiry on WhatsApp</button>
-      <p class="form-note">Your details will be prepared in a WhatsApp message for you to send.</p>
-    </form>
+    <div class="hero-rating" aria-label="Customer feedback with five-star symbols">
+      <div class="rating-stars" aria-hidden="true">★★★★★</div>
+      <p class="rating-title">Pool Genie customer reviews</p>
+      <p class="rating-note">Reliable pool care, quality repairs, and service to keep your Cape Town pool looking its best.</p>
+    </div>
   </div>
 
   <div class="wave" aria-hidden="true">
@@ -426,6 +435,78 @@
         </figure>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ============ COMMON QUESTIONS ============ -->
+<section class="section faq-section" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Common questions</h2>
+      <p>Quick answers to common questions about Pool Genie services in Cape Town.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item"><summary>Do you service all of Cape Town?</summary><p>Pool Genie works across Cape Town. Send your suburb on WhatsApp and we’ll confirm.</p></details>
+      <details class="faq-item"><summary>Can you fix a green pool?</summary><p>Yes. We restore green and neglected pools and can set up ongoing maintenance to help keep them clear.</p></details>
+      <details class="faq-item"><summary>What repairs do you do?</summary><p>We help with pool pumps, filters, motors, leaking pipes and other pool equipment. Tell us what’s happening and your suburb so we can advise on the next step.</p></details>
+      <details class="faq-item"><summary>Do you do once-off cleans?</summary><p>Yes. Once-off cleans and ongoing maintenance are both available.</p></details>
+      <details class="faq-item"><summary>How do I get a quote?</summary><p>Call or WhatsApp +27 74 064 5524, or complete the enquiry form at the bottom of this page.</p><a class="btn btn-wa" href="https://wa.me/27740645524" target="_blank" rel="noopener">Ask on WhatsApp</a></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CUSTOMER REVIEWS ============ -->
+<section class="section reviews-section" id="reviews">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>What customers say</h2>
+      <p>Customer feedback about pool cleaning, repairs and service.</p>
+    </div>
+    <div class="review-grid">
+      <article class="review-card"><div class="review-stars" aria-label="Five stars">★★★★★</div><blockquote>“My pool was completely green. Pool Genie had it sparkling again. Great service.”</blockquote><p class="review-byline">Customer review, Cape Town</p></article>
+      <article class="review-card"><div class="review-stars" aria-label="Five stars">★★★★★</div><blockquote>“Fixed our pump quickly and explained everything. Highly recommend.”</blockquote><p class="review-byline">Customer review, Cape Town</p></article>
+      <article class="review-card"><div class="review-stars" aria-label="Five stars">★★★★★</div><blockquote>“Found and repaired a leak we had been chasing for months.”</blockquote><p class="review-byline">Customer review, Cape Town</p></article>
+    </div>
+    <p class="reviews-disclaimer">Customer feedback supplied by Pool Genie. Star symbols are decorative and do not represent a verified Google rating.</p>
+  </div>
+</section>
+
+<!-- ============ FINAL ENQUIRY FORM ============ -->
+<section class="section form-section" id="enquiry">
+  <div class="wrap form-wrap">
+    <div class="section-head">
+      <h2>Tell us what your pool needs</h2>
+      <p>Complete the details below and we’ll prepare a WhatsApp message for you to send to Pool Genie.</p>
+    </div>
+    <form class="quote" id="quote-form">
+      <h2>Tell us what your pool needs</h2>
+      <p class="sub">Fill in the details and we’ll help you with the next step.</p>
+      <div class="field">
+        <label for="client-name">Your name</label>
+        <input id="client-name" name="name" autocomplete="name" required placeholder="Full name">
+      </div>
+      <div class="field">
+        <label for="client-phone">Phone number</label>
+        <input id="client-phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your contact number">
+      </div>
+      <div class="field">
+        <label for="pool-service">What do you need help with?</label>
+        <select id="pool-service" name="service" required>
+          <option value="" selected disabled>Select a service</option>
+          <option>Pool repairs</option><option>Pool cleaning</option><option>Pumps and filters</option><option>Pool renovations</option><option>Other pool service</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="client-area">Suburb / area in Cape Town</label>
+        <input id="client-area" name="area" autocomplete="address-level2" required placeholder="e.g. Durbanville">
+      </div>
+      <div class="field">
+        <label for="pool-details">A few details about the job</label>
+        <textarea id="pool-details" name="details" placeholder="Tell us about the pool or problem (optional)"></textarea>
+      </div>
+      <button class="btn btn-wa btn-block" type="submit">Send enquiry on WhatsApp</button>
+      <p class="form-note">Your details will be prepared in a WhatsApp message for you to send.</p>
+    </form>
   </div>
 </section>
 

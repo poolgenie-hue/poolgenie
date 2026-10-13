@@ -1,24 +1,22 @@
 POOL GENIE WEBSITE
 
 Files:
-- index.html: the website landing page
+- index.html: website page
 - images/pool-genie-logo.png: Pool Genie logo
 
-Hero banner:
-- Add your chosen wide pool photo to the images folder.
-- Name it exactly: hero-pool.jpg
-- The hero section is already configured to use images/hero-pool.jpg.
+OPTIONAL PHOTOS
+Add your own photos to the images folder using these exact filenames:
+- hero-pool.jpg (wide pool photo for the top background)
+- cleaning.jpg (pool cleaning service)
+- pumps.jpg (pool pump and filter service)
+- renovation.jpg (pool renovation service)
+- work-1.jpg and work-2.jpg (before and after cleaning)
+- work-3.jpg and work-4.jpg (before and after renovation)
 
-Other optional service/gallery images referenced by the HTML:
-- images/cleaning.jpg
-- images/pumps.jpg
-- images/renovation.jpg
-- images/work-1.jpg through images/work-4.jpg
+PUBLISH WITH GITHUB PAGES
+1. Extract this ZIP on your computer.
+2. Upload the contents of the pool_genie_website_updated folder to the root of your GitHub repository. Keep index.html and the images folder together.
+3. Commit the changes.
+4. In repository Settings > Pages, select Deploy from a branch, choose main and /(root), then Save.
 
-To use the website, keep index.html and the images folder together. Upload the contents of this folder to your GitHub Pages repository.
-
-Search relevance updates:
-- Updated page title and meta description for pool pump repairs and pool repairs in Cape Town.
-- Added a clear, useful pool pump/motor repair introduction.
-- Updated the pump service heading, description, and image alt text.
-- Kept the existing logo, hero text, enquiry form, service areas, and contact links.
+The contact buttons and enquiry form use Pool Genie phone/WhatsApp number +27 74 064 5524.
