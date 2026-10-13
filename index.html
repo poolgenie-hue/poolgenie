@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pool Pump Repairs &amp; Pool Repairs Cape Town | Pool Genie</title>
+<meta name="description" content="Need pool pump repairs near you in Cape Town? Pool Genie helps with pool motor repair, pool pump and filter problems, general pool repairs, cleaning and renovations. Contact us for help.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --deep: #06324a;
+    --deep-2: #0a4766;
+    --pool: #0b86a8;
+    --aqua: #5fd4e0;
+    --tile: #eaf6f8;
+    --white: #ffffff;
+    --ink: #0c2230;
+    --muted: #4d6572;
+    --sun: #f4c95d;
+    --wa: #1fa855;
+    --wa-dark: #178a45;
+    --radius: 14px;
+    --font-head: "Bricolage Grotesque", "Trebuchet MS", Arial, sans-serif;
+    --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--white);
+    line-height: 1.6;
+    font-size: 1.0625rem;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { max-width: 100%; display: block; }
+  a { color: inherit; }
+  h1, h2, h3 { font-family: var(--font-head); line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
+  p { margin: 0; }
+
+  :focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+
+  .wrap { width: min(1120px, 100% - 2.5rem); margin-inline: auto; }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .6rem;
+    padding: .95rem 1.5rem;
+    border-radius: 999px;
+    font: 600 1rem/1 var(--font-body);
+    text-decoration: none;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform .15s ease, background-color .15s ease, border-color .15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn svg { width: 1.25rem; height: 1.25rem; flex: none; }
+  .btn-wa { background: var(--wa); color: #fff; }
+  .btn-wa:hover { background: var(--wa-dark); }
+  .btn-call { background: var(--white); color: var(--deep); }
+  .btn-call:hover { background: var(--tile); }
+  .btn-outline { border-color: rgba(255,255,255,.55); color: #fff; }
+  .btn-outline:hover { border-color: #fff; }
+  .btn-block { width: 100%; }
+
+  /* ---------- Header ---------- */
+  .site-header { background: var(--deep); color: #fff; }
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; padding-block: .9rem; gap: 1rem; }
+  .brand { display: inline-flex; align-items: center; flex: none; text-decoration: none; line-height: 0; }
+  .brand img { width: 92px; height: 92px; object-fit: contain; display: block; background: #fff; border: 2px solid rgba(95, 212, 224, .8); border-radius: 12px; box-shadow: 0 4px 14px rgba(0, 0, 0, .12); }
+  .header-actions { display: flex; gap: .6rem; }
+  .header-actions .btn { padding: .65rem 1.1rem; font-size: .95rem; }
+
+  /* ---------- Hero: pool-tile grid ---------- */
+  .hero {
+    position: relative;
+    color: #fff;
+    background-color: var(--deep);
+    background-image:
+      linear-gradient(90deg, rgba(3, 29, 44, .88) 0%, rgba(3, 29, 44, .68) 48%, rgba(3, 29, 44, .30) 100%),
+      url("images/hero-pool.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-block: clamp(2.5rem, 6vw, 5rem) clamp(4.5rem, 9vw, 7rem);
+  }
+  .hero-grid { display: grid; gap: 2rem; align-items: center; grid-template-columns: minmax(0, 1.15fr) minmax(300px, .85fr); }
+  @media (max-width: 819px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hero-copy { max-width: 900px; padding-block: clamp(1rem, 4vw, 2.5rem); }
+  .hero-eyebrow {
+    margin: 0 0 1rem;
+    color: #ffffff;
+    font-size: clamp(2.4rem, 6.5vw, 5.5rem);
+    font-weight: 900;
+    letter-spacing: -.04em;
+    line-height: 1.02;
+    text-transform: uppercase;
+    text-wrap: balance;
+    text-shadow: 0 3px 22px rgba(0, 0, 0, .42);
+  }
+  .hero-eyebrow .certified-word {
+    color: #ffffff;
+    white-space: nowrap;
+    text-decoration: underline;
+    text-decoration-color: #31c7df;
+    text-decoration-thickness: .09em;
+    text-underline-offset: .12em;
+    text-decoration-skip-ink: none;
+  }
+  .hero-eyebrow .pool-services-word {
+    color: #ffd166;
+    white-space: nowrap;
+  }
+  /* Keep Cape Town and Certified white; use a warm gold accent for Pool Services against the pool-water background. */
+  .hero h1.hero-eyebrow { margin: 0 0 1rem; color: #ffffff; font-size: clamp(2.4rem, 6.5vw, 5.5rem); font-weight: 900; letter-spacing: -.04em; line-height: 1.02; }
+  .hero-services { margin-top: 1.4rem; display: flex; flex-wrap: wrap; align-items: center; gap: .55rem; color: #fff; font-size: clamp(1rem, 2.1vw, 1.35rem); font-weight: 800; letter-spacing: .01em; line-height: 1.5; }
+  .hero-services .service-chip { display: inline-block; padding: .45rem .8rem; border: 1px solid rgba(255,255,255,.9); border-radius: 8px; background: rgba(255,255,255,.94); color: #06324a; text-shadow: none; box-shadow: 0 3px 12px rgba(0,0,0,.16); }
+  .hero-services .service-dot { color: #fff; padding-inline: .05rem; font-weight: 900; text-shadow: 0 1px 6px rgba(0,0,0,.45); }
+  .hero .lead, .hero-actions, .hero-points { display: none; }
+
+  /* water edge */
+  .wave { position: absolute; left: 0; right: 0; bottom: -1px; line-height: 0; }
+  .wave svg { width: 100%; height: clamp(36px, 6vw, 70px); display: block; }
+
+  /* ---------- Quote form ---------- */
+  .quote {
+    background: var(--white);
+    color: var(--ink);
+    border-radius: 18px;
+    padding: clamp(1.4rem, 3vw, 2rem);
+    box-shadow: 0 24px 60px rgba(0, 20, 35, .35);
+  }
+  .quote h2 { font-size: 1.6rem; color: var(--deep); }
+  .quote .sub { color: var(--muted); margin: .4rem 0 1.25rem; font-size: 1rem; }
+  .field { margin-bottom: 1rem; }
+  .field label { display: block; font-weight: 600; margin-bottom: .35rem; font-size: .98rem; }
+  .field input, .field select, .field textarea {
+    width: 100%;
+    padding: .85rem 1rem;
+    font: inherit;
+    color: var(--ink);
+    background: var(--tile);
+    border: 2px solid transparent;
+    border-radius: 10px;
+  }
+  .field textarea { min-height: 110px; resize: vertical; }
+  .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--pool); background: #fff; }
+  .form-note { margin-top: .85rem; font-size: .9rem; color: var(--muted); text-align: center; }
+  .form-error { display: none; margin-top: .75rem; color: #a3201a; font-weight: 600; font-size: .95rem; }
+
+  /* ---------- Services ---------- */
+  section { scroll-margin-top: 1rem; }
+  .section { padding-block: clamp(3.5rem, 8vw, 6rem); }
+  .section-head { max-width: 40rem; margin-bottom: 2.5rem; }
+  .section-head h2 { font-size: clamp(1.9rem, 4.2vw, 3rem); color: var(--deep); }
+  .section-head p { margin-top: .9rem; color: var(--muted); }
+
+  .pump-repair-intro {
+    margin: -1rem 0 3rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border: 1px solid #c5e8ee;
+    border-left: 5px solid var(--pool);
+    border-radius: 14px;
+    background: linear-gradient(135deg, #f0fbfc, #ffffff);
+  }
+  .pump-repair-intro h3 { color: var(--deep); font-size: clamp(1.35rem, 2.5vw, 1.8rem); }
+  .pump-repair-intro p { margin: .75rem 0 1.1rem; max-width: 60rem; color: var(--muted); }
+  .service { display: grid; gap: 1.5rem; align-items: center; margin-bottom: clamp(2.5rem, 6vw, 4.5rem); }
+  @media (min-width: 820px) {
+    .service { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
+    .service.flip .service-media { order: 2; }
+  }
+  .service-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    border-radius: var(--radius);
+    overflow: hidden;
+    background:
+      linear-gradient(rgba(255,255,255,.35) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.35) 1px, transparent 1px),
+      linear-gradient(135deg, var(--pool), var(--aqua));
+    background-size: 40px 40px, 40px 40px, 100% 100%;
+  }
+  .service-media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .service h3 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--deep); }
+  .service p { margin-top: .85rem; color: var(--muted); }
+  .service ul { margin: 1.1rem 0 0; padding-left: 1.2rem; }
+  .service li { margin-bottom: .35rem; }
+  .service .btn { margin-top: 1.4rem; }
+
+  /* ---------- Steps (a real sequence) ---------- */
+  .steps-band { background: var(--tile); }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.25rem; counter-reset: step; }
+  @media (min-width: 820px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 2rem; } }
+  .steps li { counter-increment: step; padding-top: 1rem; border-top: 4px solid var(--pool); }
+  .steps li::before { content: counter(step); font: 800 2.4rem/1 var(--font-head); color: var(--pool); display: block; margin-bottom: .5rem; }
+  .steps h3 { font-size: 1.3rem; color: var(--deep); }
+  .steps p { margin-top: .4rem; color: var(--muted); }
+
+  /* ---------- Gallery ---------- */
+  .gallery { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+  @media (min-width: 820px) { .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .gallery-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+  .gallery-pair figure { min-width: 0; }
+  .gallery-label { display: inline-block; margin-top: .5rem; padding: .2rem .55rem; border-radius: 999px; font-size: .78rem; font-weight: 700; }
+  .gallery-label.before { background: #fbe9e7; color: #8d352c; }
+  .gallery-label.after { background: #e0f4e8; color: #176b42; }
+  .gallery figure { margin: 0; }
+  .gallery .service-media { aspect-ratio: 1; }
+  .gallery figcaption { margin-top: .45rem; font-size: .92rem; color: var(--muted); }
+
+  /* ---------- Final call-to-action ---------- */
+  .cta { background: var(--deep); color: #fff; text-align: center; padding-block: clamp(3rem, 7vw, 5rem); }
+  .cta h2 { font-size: clamp(1.9rem, 4.5vw, 3.2rem); max-width: 24ch; margin-inline: auto; }
+  .cta p { margin: 1rem auto 0; max-width: 36rem; color: #d4eef3; }
+  .cta .hero-actions { justify-content: center; }
+
+  footer { background: #041f2f; color: #9fb9c4; padding-block: 1.5rem; font-size: .95rem; }
+  footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .75rem; }
+
+  /* ---------- Always-visible floating contact bar ---------- */
+  .sticky-bar {
+    display: grid; grid-template-columns: 1fr 1fr; gap: .6rem;
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 100;
+    padding: .65rem max(.75rem, calc((100vw - 1120px) / 2)) calc(.65rem + env(safe-area-inset-bottom, 0px));
+    background: rgba(4, 31, 47, .96);
+    box-shadow: 0 -6px 22px rgba(0, 20, 35, .18);
+    backdrop-filter: blur(8px);
+  }
+  .sticky-bar .btn { padding: .85rem 1rem; min-height: 48px; }
+  body { padding-bottom: 5.5rem; }
+  @media (max-width: 720px) {
+    .site-header .wrap { padding-block: .55rem; }
+    .brand img { width: 76px; height: 76px; }
+    .header-actions { display: none; }
+    .sticky-bar { padding-inline: .75rem; }
+    .hero { padding-block: 2rem 4.5rem; }
+    .hero-copy { padding-block: .5rem; }
+    .hero-eyebrow { font-size: clamp(2.2rem, 11vw, 3.5rem); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+    .btn:hover { transform: none; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap">
+    <a href="#top" class="brand" aria-label="Pool Genie home"><img src="images/pool-genie-logo.png" alt="Pool Genie logo"></a>
+
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO PHOTO: save your own pool photo as images/hero-pool.jpg -->
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 class="hero-eyebrow">Cape Town <span class="certified-word">Certified</span> <span class="pool-services-word">Pool Services</span></h1>
+      <p class="hero-services"><span class="service-chip">Pool Repairs</span><span class="service-dot" aria-hidden="true">·</span><span class="service-chip">Pool Cleaning</span><span class="service-dot" aria-hidden="true">·</span><span class="service-chip">Pool Renovations</span></p>
+    </div>
+    <form class="quote" id="quote-form">
+      <h2>Tell us what your pool needs</h2>
+      <p class="sub">Fill in the details and we’ll help you with the next step.</p>
+      <div class="field">
+        <label for="client-name">Your name</label>
+        <input id="client-name" name="name" autocomplete="name" required placeholder="Full name">
+      </div>
+      <div class="field">
+        <label for="client-phone">Phone number</label>
+        <input id="client-phone" name="phone" type="tel" autocomplete="tel" required placeholder="Your contact number">
+      </div>
+      <div class="field">
+        <label for="pool-service">What do you need help with?</label>
+        <select id="pool-service" name="service" required>
+          <option value="" selected disabled>Select a service</option>
+          <option>Pool repairs</option><option>Pool cleaning</option><option>Pumps and filters</option><option>Pool renovations</option><option>Other pool service</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="client-area">Suburb / area in Cape Town</label>
+        <input id="client-area" name="area" autocomplete="address-level2" required placeholder="e.g. Durbanville">
+      </div>
+      <div class="field">
+        <label for="pool-details">A few details about the job</label>
+        <textarea id="pool-details" name="details" placeholder="Tell us about the pool or problem (optional)"></textarea>
+      </div>
+      <button class="btn btn-wa btn-block" type="submit">Send enquiry on WhatsApp</button>
+      <p class="form-note">Your details will be prepared in a WhatsApp message for you to send.</p>
+    </form>
+  </div>
+
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 70" preserveAspectRatio="none"><path fill="#ffffff" d="M0 40c120 22 240 22 360 4s240-26 360-8 240 34 360 20 240-30 360-8v22H0z"/></svg>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Pool Pump Repairs &amp; Pool Repairs in Cape Town</h2>
+      <p>Need pool pump repairs near you? Pool Genie helps Cape Town pool owners with faulty pumps, pool motor repair, filters and general pool repairs, as well as pool cleaning and renovations.</p>
+    </div>
+
+    <div class="pump-repair-intro">
+      <h3>Pool pump and motor problems? We can help.</h3>
+      <p>If your pool pump is noisy, leaking, losing pressure or not starting, we can help assess the problem and advise on repair or replacement. For pool motor repair and pool pump repairs in Cape Town, tell us what is happening and which suburb you are in.</p>
+      <a class="btn btn-wa" href="#quote-form">Request pool repair help</a>
+    </div>
+
+    <!-- To add a picture: put the file in an "images" folder and keep the name below (or change the src). -->
+    <article class="service">
+      <div class="service-media">
+        <img src="images/cleaning.jpg" alt="Pool being cleaned" loading="lazy" onerror="this.remove()">
+      </div>
+      <div>
+        <h3>Pool cleaning</h3>
+        <p>We help keep your pool water clean, clear and ready to enjoy.</p>
+        <ul>
+          <li>Pool cleaning and maintenance</li>
+          <li>Water testing and chemical balancing</li>
+        </ul>
+        <a class="btn btn-wa js-wa-service" data-service="Pool cleaning" href="https://wa.me/27740645524" target="_blank" rel="noopener">Ask about cleaning</a>
+      </div>
+    </article>
+
+    <article class="service flip">
+      <div class="service-media">
+        <img src="images/pumps.jpg" alt="Pool pump and filter equipment for pool pump repairs in Cape Town" loading="lazy" onerror="this.remove()">
+      </div>
+      <div>
+        <h3>Pool Pump Repairs &amp; Motor Repair</h3>
+        <p>Having pool pump trouble? If the pump is noisy, leaking, losing pressure or will not start, we help diagnose the issue and advise on pool pump repair or replacement. Ask us about pool motor repair and pump-related pool repairs across Cape Town.</p>
+        <ul>
+          <li>Pool pump repairs and replacement</li>
+          <li>Pool motor fault checks and repair advice</li>
+          <li>Filter service and installation</li>
+          <li>Timers, plumbing and leak checks</li>
+        </ul>
+        <a class="btn btn-wa js-wa-service" data-service="Pump or filter problem" href="https://wa.me/27740645524" target="_blank" rel="noopener">Ask about pump repairs</a>
+      </div>
+    </article>
+
+    <article class="service">
+      <div class="service-media">
+        <img src="images/renovation.jpg" alt="Pool renovation in progress" loading="lazy" onerror="this.remove()">
+      </div>
+      <div>
+        <h3>Renovations</h3>
+        <p>Cracked tiles, worn plaster or a tired design. We renovate the pool so it looks new again.</p>
+        <ul>
+          <li>Re-tiling and re-plastering</li>
+          <li>Coping, steps and pool surrounds</li>
+          <li>Upgrades: lighting, covers and heating</li>
+        </ul>
+        <a class="btn btn-wa js-wa-service" data-service="Pool renovation" href="https://wa.me/27740645524" target="_blank" rel="noopener">Ask about renovations</a>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section steps-band" id="how">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>How it works</h2>
+    </div>
+    <ol class="steps">
+      <li>
+        <h3>Send us the details</h3>
+        <p>Call or message us on WhatsApp and tell us what your pool needs.</p>
+      </li>
+      <li>
+        <h3>We get back to you</h3>
+        <p>We confirm the problem, the price range and a time to visit.</p>
+      </li>
+      <li>
+        <h3>We fix it</h3>
+        <p>We do the work and leave the area clean.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Our recent work</h2>
+      <p>A look at pool cleaning and renovation work.</p>
+    </div>
+    <div class="gallery">
+      <div class="gallery-pair" aria-label="Pool cleaning before and after">
+        <figure>
+          <div class="service-media"><img src="images/work-1.jpg" alt="Pool before cleaning" loading="lazy" onerror="this.remove()"></div>
+          <figcaption><span class="gallery-label before">Before</span></figcaption>
+        </figure>
+        <figure>
+          <div class="service-media"><img src="images/work-2.jpg" alt="Same pool after cleaning" loading="lazy" onerror="this.remove()"></div>
+          <figcaption><span class="gallery-label after">After</span></figcaption>
+        </figure>
+      </div>
+      <div class="gallery-pair" aria-label="Pool renovation before and after">
+        <figure>
+          <div class="service-media"><img src="images/work-3.jpg" alt="Pool before renovation" loading="lazy" onerror="this.remove()"></div>
+          <figcaption><span class="gallery-label before">Before</span></figcaption>
+        </figure>
+        <figure>
+          <div class="service-media"><img src="images/work-4.jpg" alt="Pool after renovation" loading="lazy" onerror="this.remove()"></div>
+          <figcaption><span class="gallery-label after">After</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="cta" id="contact">
+  <div class="wrap">
+    <h2>Ready to sort out your pool?</h2>
+    <p>Message us on WhatsApp or call to discuss your pool service needs.</p>
+    <div class="hero-actions">
+      <a class="btn btn-wa js-wa" href="https://wa.me/27740645524" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <a class="btn btn-call js-call" href="tel:+27740645524">Call now</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Pool Genie</span>
+    <span>Cape Town Certified Pool Services</span>
+  </div>
+</footer>
+
+<!-- Mobile: always-visible call and WhatsApp buttons -->
+<div class="sticky-bar">
+  <a class="btn btn-call js-call" href="tel:+27740645524">Call</a>
+  <a class="btn btn-wa js-wa" href="https://wa.me/27740645524" target="_blank" rel="noopener">WhatsApp</a>
+</div>
+
+<script>
+  /* ==========================================================
+     EDIT ONLY THIS BLOCK
+     ----------------------------------------------------------
+     PHONE_CALL      : number for the Call buttons, with country code and + sign
+     PHONE_WHATSAPP  : WhatsApp number, with country code, digits only (no + or spaces)
+     BUSINESS_NAME   : shown in the footer and in the WhatsApp message
+     ========================================================== */
+  var CONFIG = {
+    PHONE_CALL: "+27740645524",
+    PHONE_WHATSAPP: "27740645524",
+    BUSINESS_NAME: "Pool Genie"
+  };
+
+  function waLink(text) {
+    var base = "https://wa.me/" + CONFIG.PHONE_WHATSAPP;
+    return text ? base + "?text=" + encodeURIComponent(text) : base;
+  }
+
+  // Call buttons
+  document.querySelectorAll(".js-call").forEach(function (a) {
+    a.href = "tel:" + CONFIG.PHONE_CALL;
+  });
+
+  // Plain WhatsApp buttons
+  document.querySelectorAll(".js-wa").forEach(function (a) {
+    a.href = waLink("Hello " + CONFIG.BUSINESS_NAME + ", I would like some help with my pool.");
+  });
+
+  // Service buttons: WhatsApp with the service pre-filled
+  document.querySelectorAll(".js-wa-service").forEach(function (a) {
+    a.href = waLink("Hello " + CONFIG.BUSINESS_NAME + ", I need help with: " + a.dataset.service + ".");
+  });
+
+  // Quote form: opens WhatsApp with the client's details filled in.
+  document.getElementById("quote-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+    var data = new FormData(event.currentTarget);
+    var message = "Hello " + CONFIG.BUSINESS_NAME + ", I would like help with my pool.\n\n" +
+      "Name: " + data.get("name") + "\n" +
+      "Phone: " + data.get("phone") + "\n" +
+      "Service: " + data.get("service") + "\n" +
+      "Area: " + data.get("area") + "\n" +
+      "Details: " + (data.get("details") || "Not provided");
+    window.open(waLink(message), "_blank", "noopener,noreferrer");
+  });
+
+  // Footer year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+</script>
+
+</body>
+</html>
