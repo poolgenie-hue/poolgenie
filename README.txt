@@ -11,7 +11,11 @@ Add your own photos to the images folder using these exact filenames:
 - pumps.jpg (pool pump and filter service)
 - renovation.jpg (pool renovation service)
 - work-1.jpg and work-2.jpg (before and after cleaning)
-- work-3.jpg and work-4.jpg (before and after renovation)
+- work-3.jpg and work-4.jpg (before and after pool renovation / resurfacing)
+- work-5.jpg and work-6.jpg (before and after pool repairs)
+
+RENOVATION SEARCH TERMS
+The landing page includes relevant wording for pool renovations Cape Town, pool renovations near me, pool relining Cape Town, pool relining near me, pool resurfacing Cape Town and pool resurfacing near me.
 
 PUBLISH WITH GITHUB PAGES
 1. Extract this ZIP on your computer.
@@ -20,3 +24,6 @@ PUBLISH WITH GITHUB PAGES
 4. In repository Settings > Pages, select Deploy from a branch, choose main and /(root), then Save.
 
 The contact buttons and enquiry form use Pool Genie phone/WhatsApp number +27 74 064 5524.
+
+NOTE ABOUT CUSTOMER REVIEWS
+Only publish a new testimonial if it reflects real feedback from a customer. The page keeps the existing three reviews until you provide the wording for the renovation customer's review.
